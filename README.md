@@ -76,7 +76,6 @@ Please do not expose the appid and appkey on browser applications. In case of a 
 	* *ocrResultFront* : Required parameter. This is the 'details' JSON from OCR response for front of the document. 
 	* *ocrResultBack* : required parameter for validatePassportInput, validateAadhaarInput, validateVoterIdInput. This is the 'details' JSON from OCR response for back of the document. 
 	* *qrResult* : JSON object. Optional parameter for validateAadhaarInput. Incase qrResult is present, userInput should not be added.
-	* *checkDatabase* : Optional, boolean value, applicable only for PAN and voterID validation.
 
 ## Request Structure
 
@@ -89,7 +88,6 @@ Please do not expose the appid and appkey on browser applications. In case of a 
     dob: <required. String of format 'DD/MM/YYYY'>
   },
   ocrResult: <required. *details* json from OCR response>
-  checkDatabase:<optional. Boolean value, defaults to false. If set to true, NSDL check is made>
 }
 ```
 
@@ -145,7 +143,6 @@ Please do not expose the appid and appkey on browser applications. In case of a 
   }
   ocrResultFront: <required. *details* json from OCR response for voterID front>,
   ocrResultBack: <required. *details* json from OCR response for voterID back>,
-  checkDatabase: <optional. Boolean value, defaults to false. If set to true, central DB check is made>
 }
 ```
 ## Response Structure
@@ -227,6 +224,8 @@ The following are various senarios where validation could fail.
 |454|VoterID - Central DB check - Address mismatch|
 |999|PAN/VoterID - NSDL/Central DB unavailable|
 
+Please note: By default, NSDL/Central DB check will not be made.
+
 
 ## Error Codes
 The following are the various input errors that could happen. The 'message' and 'path' received in the response body would have more details regarding each error.
@@ -241,6 +240,5 @@ The following are the various input errors that could happen. The 'message' and 
 |1010|Validation error with 'ocrResult' field|
 |1011|Validation error with 'ocrResultFront' field|
 |1012|Validation error with 'ocrResultBack' field|
-|1013|Validation error with 'checkDatabase' field|
 |1014|Validation error with 'qr' field|
 |1099|Input validation error|
