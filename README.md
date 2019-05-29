@@ -3,7 +3,7 @@
 
 ## Overview
 
-This documentation describes the validation API beta. The postman collection can be found [here](https://www.getpostman.com/collections/4ba223a7648215bddb9f). 
+This documentation describes the validation API beta. The postman collection can be found [here](https://www.getpostman.com/collections/20587b5b5a8c80f89b9b). 
 
 
 - [HyperVerge Validation API Documentation (beta)](#hyperverge-validation-api-documentation-beta)
