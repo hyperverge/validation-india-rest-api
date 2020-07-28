@@ -197,11 +197,11 @@ The following are various senarios where validation could fail.
 |101|PAN - Name from user input did not match OCR|
 |102|PAN - DOB from user input did not match OCR|
 |103|PAN - PAN number from user input did not match OCR|
-|151|PAN - NSDL check - Duplicat match found|
-|152|PAN - NSDL check - Inactive card|
-|153|PAN - NSDL check - Name mismatch|
-|154|PAN - NSDL check - DOB mismatch|
-|155|PAN - NSDL check - PAN number incorrect|
+|151|PAN - DB check - Duplicate match found|
+|152|PAN - DB check - Inactive card|
+|153|PAN - DB check - Name mismatch|
+|154|PAN - DB check - DOB mismatch|
+|155|PAN - DB check - PAN number incorrect|
 |201|Passport - Name from user input did not match OCR|
 |202|Passport - DOB from user input did not match OCR|
 |203|Passport - Passport number from user input did not match OCR|
